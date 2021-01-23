@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                  */
                 this.display2.setText("");
                 this.prepareInput(this.input);
-                this.input = " = ";
+                this.input = "";
                 break;
         }
     }
@@ -221,7 +221,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
          * 2 + 2
          */
         if(allInput.length > 1) {
-            System.out.println(allInput[1]);
 
             for(int i = 0; i < allInput.length; i++) {
                 int temp = 0;
@@ -233,8 +232,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                         // Jika setelah tanda bagi ('/') angkanya adalah 0 maka tampilkan error.
                         if(option2 == 0) {
-                            System.out.println("Not allowed");
-                            this.updateDisplay1("Error");
+                            System.out.println("Tidak dapat membagi angka dengan angka 0");
+                            this.updateDisplay1("Tidak dapat membagi angka dengan angka 0");
                             input = "";
                             return;
                         }
